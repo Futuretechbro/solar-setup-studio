@@ -14,3 +14,4 @@
 - Solar sizing math lives only in `src/lib/solar.ts` (pure functions). Why: the web calculator and future WhatsApp bot must share one sizing rule.
 - Quote and invoice makers share `src/components/tools/DocumentMaker.tsx` (`kind` prop), client-side only, printed via `window.print()` with `.no-print` / `.print-area` styles. Why: no backend needed for free tools.
 - Brand/WhatsApp number and naira formatting come from `src/lib/site.ts`. Why: single place to swap the bot number.
+- UI packages used by components are listed in `vite.config.ts` `vite.optimizeDeps.include`. Why: mid-session dependency re-optimization loads two React copies and blanks the preview.
