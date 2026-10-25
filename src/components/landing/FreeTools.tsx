@@ -40,7 +40,7 @@ export function FreeTools() {
             <Link
               key={t.title}
               to={t.to}
-              hash={"hash" in t ? t.hash : undefined}
+              {...("hash" in t && t.hash ? { hash: t.hash } : {})}
               className="group relative flex flex-col overflow-hidden rounded-3xl border border-forest-foreground/10 bg-forest-deep p-8 transition-all hover:-translate-y-1 hover:border-sun/50"
             >
               <span className="font-display text-7xl font-bold text-forest-foreground/5 absolute right-6 top-4">

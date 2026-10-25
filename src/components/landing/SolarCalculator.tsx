@@ -150,7 +150,7 @@ export function SolarCalculator() {
                   max={16}
                   step={1}
                   value={[backupHours]}
-                  onValueChange={(v) => setBackupHours(v[0])}
+                  onValueChange={(v) => setBackupHours(v[0] ?? 8)}
                   aria-label="Backup hours"
                 />
               </div>
