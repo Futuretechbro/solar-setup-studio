@@ -7,18 +7,17 @@ import {
   PlugZap,
   Sparkles,
   Sun,
-  Wrench,
+
   Cog,
 } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const SERVICES = [
   { icon: PlugZap, name: "Electricians" },
-  { icon: Droplets, name: "Plumbers" },
+  { icon: Droplets, name: "Plumbing & boreholes" },
   { icon: Fan, name: "AC & fridge repair" },
   { icon: Cog, name: "Generator mechanics" },
   { icon: Camera, name: "CCTV & security" },
-  { icon: Wrench, name: "Borehole & pumps" },
   { icon: Paintbrush, name: "Painters" },
   { icon: Hammer, name: "Carpenters & tilers" },
   { icon: Sparkles, name: "Cleaning & fumigation" },
