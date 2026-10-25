@@ -33,7 +33,7 @@ const CHAT: Msg[] = [
   { from: "me", text: "1 — 4 bulbs, 2 fans, TV and fridge", time: "9:42" },
   {
     from: "bot",
-    text: "☀️ Your setup:\n• 1.5kVA inverter (24V)\n• 1 × 5kWh lithium battery\n• 3 × 550W panels\n\nWant a quote from a vetted installer?",
+    text: "☀️ Your setup:\n• 1kVA inverter (12V)\n• 1 × 5kWh lithium battery\n• 2 × 550W panels\n\nWant a quote from a vetted installer?",
     time: "9:42",
   },
 ];
