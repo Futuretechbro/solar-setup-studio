@@ -1,24 +1,52 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/landing/SiteHeader";
+import { Hero } from "@/components/landing/Hero";
+import { BrandsMarquee } from "@/components/landing/BrandsMarquee";
+import { HowItWorks } from "@/components/landing/HowItWorks";
+import { FreeTools } from "@/components/landing/FreeTools";
+import { SolarCalculator } from "@/components/landing/SolarCalculator";
+import { WhatsAppBot } from "@/components/landing/WhatsAppBot";
+import { WhyEgbon } from "@/components/landing/WhyEgbon";
+import { MoreHands } from "@/components/landing/MoreHands";
+import { FinalCta, SiteFooter } from "@/components/landing/SiteFooter";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Egbon — Solar Calculator, Quotes & Invoices on WhatsApp" },
+      {
+        name: "description",
+        content:
+          "Size your solar inverter, batteries and panels for free, make quotes and invoices, and get matched with vetted installers — on the web or WhatsApp.",
+      },
+      { property: "og:title", content: "Egbon — Stop guessing your solar. Ask Egbon." },
+      {
+        property: "og:description",
+        content: "Free solar calculator, quotation maker and invoice maker for Nigerian homes and installers — also on WhatsApp.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <SiteHeader />
+      <main>
+        <Hero />
+        <BrandsMarquee />
+        <HowItWorks />
+        <FreeTools />
+        <SolarCalculator />
+        <WhatsAppBot />
+        <WhyEgbon />
+        <MoreHands />
+        <FinalCta />
+      </main>
+      <SiteFooter />
+    </>
   );
 }
