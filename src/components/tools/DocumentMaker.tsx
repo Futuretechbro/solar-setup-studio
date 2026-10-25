@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { Plus, Printer, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -228,7 +228,7 @@ export function DocumentMaker({ kind }: { kind: Kind }) {
   );
 }
 
-function Panel({ title, children }: { title: string; children: React.ReactNode }) {
+function Panel({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="space-y-3 rounded-3xl border border-border bg-card p-6 shadow-card">
       <h2 className="text-base font-bold text-forest">{title}</h2>
